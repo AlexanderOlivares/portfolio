@@ -1,25 +1,58 @@
-import React from "react";
-import { Container } from "@material-ui/core";
+import React, { useState } from "react";
+import { Container, Typography } from "@material-ui/core";
 import Grid from "@material-ui/core/Grid";
 import Card from "./Card";
+import Button from "@material-ui/core/Button";
+import MailOutlineIcon from "@material-ui/icons/MailOutline";
+import GitHubIcon from "@material-ui/icons/GitHub";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import Box from "@material-ui/core/Box";
+import projectData from "./ProjectData";
 
 export default function Projects() {
+  const [projectInfo, setProjectInfo] = useState(projectData);
+
+  console.log(projectInfo);
   return (
-    <Container>
-      <Grid container spacing={8}>
-        <Grid item>
-          <Card />
-        </Grid>
-        <Grid item>
-          <Card />
-        </Grid>
-        <Grid item>
-          <Card />
-        </Grid>
-        <Grid item>
-          <Card />
-        </Grid>
-      </Grid>
-    </Container>
+    <>
+      <Box m={3}>
+        <Typography variant="h2" sm={"h6"} align="center" margin="10">
+          Alex Olivares
+        </Typography>
+        <Typography variant="h5" align="center">
+          Web Developer
+          <Box m={2}>
+            <Button color="inherit" href="/">
+              {<LinkedInIcon />}
+            </Button>
+            <Button color="inherit" href="/">
+              {<GitHubIcon />}
+            </Button>
+            <Button color="inherit" href="/">
+              {<MailOutlineIcon />}
+            </Button>
+          </Box>
+        </Typography>
+      </Box>
+      <Box p={3}>
+        <Container align="center">
+          <Grid
+            container
+            spacing={10}
+            alignItems="center"
+            justify="center"
+            direction="row"
+          >
+            {projectInfo.map(currentProject => {
+              return (
+                <Grid item xs={12} sm={12} md={6}>
+                  <Card projectInfo={currentProject} />
+                </Grid>
+              );
+            })}
+          </Grid>
+        </Container>
+      </Box>
+    </>
   );
 }

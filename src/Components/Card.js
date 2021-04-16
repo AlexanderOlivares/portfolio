@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import clsx from "clsx";
 import Card from "@material-ui/core/Card";
@@ -36,9 +36,14 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function RecipeReviewCard() {
+// export default function () {
+export default function ProjectInfoCard({ projectInfo }) {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
+
+  const [info, setInfo] = useState(projectInfo);
+
+  console.log(info.name);
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
@@ -49,26 +54,27 @@ export default function RecipeReviewCard() {
       <CardHeader
         avatar={
           <Avatar aria-label="recipe" className={classes.avatar}>
-            JS
+            {info.icon}
           </Avatar>
         }
         action={<IconButton aria-label="settings"></IconButton>}
-        title="Widget Grid"
-        subheader="React, JS, Styled Components"
+        title={info.name}
+        subheader={info.subHeader}
       />
       <CardMedia
         className={classes.media}
-        image="https://picsum.photos/200/300"
+        image={info.img}
         title="Paella dish"
       />
       <CardContent>
         <Typography variant="body2" color="textSecondary" component="p">
-          A bookshelf for audiobook lovers.
+          {info.shortDescrip}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
         <IconButton aria-label="add to favorites">DEMO</IconButton>
         <IconButton aria-label="share">CODE</IconButton>
+        {info.demoCreds && <IconButton aria-label="share">CREDS</IconButton>}
         <IconButton
           className={clsx(classes.expand, {
             [classes.expandOpen]: expanded,
@@ -82,9 +88,7 @@ export default function RecipeReviewCard() {
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-          <Typography paragraph>Method:</Typography>
-          <Typography paragraph>Why I built this project</Typography>
-          <Typography paragraph>How I built this project</Typography>
+          <Typography paragraph>{info.longDescrip}</Typography>
         </CardContent>
       </Collapse>
     </Card>
