@@ -7,50 +7,39 @@ import ToggleOffOutlinedIcon from "@material-ui/icons/ToggleOffOutlined";
 import ToggleOnIcon from "@material-ui/icons/ToggleOn";
 import Brightness7Icon from "@material-ui/icons/Brightness7";
 import Brightness2Icon from "@material-ui/icons/Brightness2";
+import { IconButton } from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
     justifyContent: "center",
   },
-  title: {
-    flexGrow: 1,
-  },
-  icons: {
-    justifyContent: "flex-end",
-  },
 }));
 
-export default function Navbar() {
+export default function Navbar({ darkMode, setDarkMode }) {
   const classes = useStyles();
 
-  const [isDarkTheme, setIsDarkTheme] = useState(false);
-
-  function toggleTheme(e) {
-    e.preventDefault();
-    setIsDarkTheme(!isDarkTheme);
+  function toggleTheme() {
+    setDarkMode(!darkMode);
   }
 
   return (
-    <div>
-      <AppBar position="static">
-        <Toolbar className={classes.root}>
-          <Button color="inherit" href="/">
-            Projects
-          </Button>
-          <Button color="inherit" href="/about">
-            About
-          </Button>
-          <Button color="inherit" href="/contact">
-            Contact
-          </Button>
-          <Button color="inherit" href="/contact"></Button>
-          <Button color="inherit" href="/" onClick={toggleTheme}>
-            {isDarkTheme ? <ToggleOnIcon /> : <ToggleOffOutlinedIcon />}
-          </Button>
-          {isDarkTheme ? <Brightness2Icon /> : <Brightness7Icon />}
-        </Toolbar>
-      </AppBar>
-    </div>
+    <AppBar position="sticky">
+      <Toolbar className={classes.root}>
+        <Button color="inherit" href="/">
+          Projects
+        </Button>
+        <Button color="inherit" href="/about">
+          About
+        </Button>
+        <Button color="inherit" href="/contact">
+          Contact
+        </Button>
+        <IconButton color="inherit" onClick={toggleTheme}>
+          {darkMode ? <ToggleOnIcon /> : <ToggleOffOutlinedIcon />}
+        </IconButton>
+        {darkMode ? <Brightness2Icon /> : <Brightness7Icon />}
+      </Toolbar>
+    </AppBar>
   );
 }

@@ -9,8 +9,8 @@ import CardActions from "@material-ui/core/CardActions";
 import Collapse from "@material-ui/core/Collapse";
 import Avatar from "@material-ui/core/Avatar";
 import IconButton from "@material-ui/core/IconButton";
+import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
-import { red } from "@material-ui/core/colors";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 const useStyles = makeStyles(theme => ({
@@ -31,19 +31,19 @@ const useStyles = makeStyles(theme => ({
   expandOpen: {
     transform: "rotate(180deg)",
   },
-  avatar: {
-    backgroundColor: red[500],
+  JavaScript: {
+    backgroundColor: "#f7df1e",
+  },
+  React: {
+    backgroundColor: "#61DBFB",
   },
 }));
 
-// export default function () {
 export default function ProjectInfoCard({ projectInfo }) {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
   const [info, setInfo] = useState(projectInfo);
-
-  console.log(info.name);
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
@@ -53,27 +53,33 @@ export default function ProjectInfoCard({ projectInfo }) {
     <Card className={classes.root}>
       <CardHeader
         avatar={
-          <Avatar aria-label="recipe" className={classes.avatar}>
-            {info.icon}
-          </Avatar>
+          info.language === "JavaScript" ? (
+            <Avatar aria-label="recipe" className={classes.JavaScript}>
+              {info.icon}
+            </Avatar>
+          ) : (
+            <Avatar aria-label="recipe" className={classes.React}>
+              {info.icon}
+            </Avatar>
+          )
         }
         action={<IconButton aria-label="settings"></IconButton>}
         title={info.name}
         subheader={info.subHeader}
       />
-      <CardMedia
-        className={classes.media}
-        image={info.img}
-        title="Paella dish"
-      />
+      <CardMedia className={classes.media} image={info.img} alt="info.name" />
       <CardContent>
         <Typography variant="body2" color="textSecondary" component="p">
           {info.shortDescrip}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">DEMO</IconButton>
-        <IconButton aria-label="share">CODE</IconButton>
+        <Button size="large" href={info.demo} target="_blank">
+          DEMO
+        </Button>
+        <Button size="large" href={info.repoUrl} target="_blank">
+          CODE
+        </Button>
         {info.demoCreds && <IconButton aria-label="share">CREDS</IconButton>}
         <IconButton
           className={clsx(classes.expand, {
@@ -82,6 +88,7 @@ export default function ProjectInfoCard({ projectInfo }) {
           onClick={handleExpandClick}
           aria-expanded={expanded}
           aria-label="show more"
+          color="secondary"
         >
           <ExpandMoreIcon />
         </IconButton>

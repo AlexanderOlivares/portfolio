@@ -22,13 +22,21 @@ export default function Projects() {
         <Typography variant="h5" align="center">
           Web Developer
           <Box m={2}>
-            <Button color="inherit" href="/">
+            <Button
+              color="inherit"
+              target="_blank"
+              href="https://www.linkedin.com/in/alex-olivares/"
+            >
               {<LinkedInIcon />}
             </Button>
-            <Button color="inherit" href="/">
+            <Button
+              color="inherit"
+              target="_blank"
+              href="https://github.com/AlexanderOlivares"
+            >
               {<GitHubIcon />}
             </Button>
-            <Button color="inherit" href="/">
+            <Button color="inherit" href="/contact">
               {<MailOutlineIcon />}
             </Button>
           </Box>
