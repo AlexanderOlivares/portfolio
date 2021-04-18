@@ -49,6 +49,8 @@ export default function ProjectInfoCard({ projectInfo }) {
     setExpanded(!expanded);
   };
 
+  console.log(info.img);
+
   return (
     <Card className={classes.root}>
       <CardHeader

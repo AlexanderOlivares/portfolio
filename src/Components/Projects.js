@@ -53,7 +53,7 @@ export default function Projects() {
           >
             {projectInfo.map(currentProject => {
               return (
-                <Grid item xs={12} sm={12} md={6}>
+                <Grid key={currentProject.name} item xs={12} sm={12} md={6}>
                   <Card projectInfo={currentProject} />
                 </Grid>
               );

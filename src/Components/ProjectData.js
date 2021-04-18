@@ -1,4 +1,6 @@
 import { FaJsSquare, FaReact } from "react-icons/fa";
+import virtualbookshelf from "../images/vb.png";
+import widgetgrid from "../images/wg.png";
 
 let projectData = [
   {
@@ -6,7 +8,8 @@ let projectData = [
     language: "React",
     name: "Virtual Bookshelf",
     subHeader: "React | Firebase | Styled Components",
-    img: "https://picsum.photos/200/300",
+    // img: "https://picsum.photos/200/300",
+    img: virtualbookshelf,
     repoUrl: "https://github.com/AlexanderOlivares/Virtual-Bookshelf",
     demo: "https://alexanderolivares.github.io/Virtual-Bookshelf/",
     shortDescrip:
@@ -19,7 +22,7 @@ let projectData = [
     language: "JavaScript",
     name: "Widget Grid",
     subHeader: "Vanilla JavaScript | CSS",
-    img: "https://picsum.photos/200/300",
+    img: widgetgrid,
     repoUrl: "https://github.com/AlexanderOlivares/Widget-Grid",
     demo: "https://alexanderolivares.github.io/Widget-Grid/",
     shortDescrip: "Four-in-one widget app built with CSS grid",
