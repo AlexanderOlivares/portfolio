@@ -82,7 +82,6 @@ export default function ProjectInfoCard({ projectInfo }) {
         <Button size="large" href={info.repoUrl} target="_blank">
           CODE
         </Button>
-        {info.demoCreds && <IconButton aria-label="share">CREDS</IconButton>}
         <IconButton
           className={clsx(classes.expand, {
             [classes.expandOpen]: expanded,

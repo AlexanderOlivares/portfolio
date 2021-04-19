@@ -6,6 +6,9 @@ import Button from "@material-ui/core/Button";
 import Icon from "@material-ui/core/Icon";
 import CloudDownloadIcon from "@material-ui/icons/CloudDownload";
 import Box from "@material-ui/core/Box";
+import emailjs from "emailjs-com";
+import GitHubIcon from "@material-ui/icons/GitHub";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -18,7 +21,11 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function StateTextFields() {
+export default function Contact() {
+  const SID = process.env.REACT_APP_SERVICEID;
+  const TID = process.env.REACT_APP_TEMPLATEID;
+  const UID = process.env.REACT_APP_USERID;
+
   const classes = useStyles();
 
   const [input, setInput] = useState({
@@ -37,6 +44,25 @@ export default function StateTextFields() {
     });
   };
 
+  function sendEmail(e) {
+    e.preventDefault();
+
+    emailjs.sendForm(SID, TID, e.target, UID).then(
+      result => {
+        alert("Thanks for reaching out -Alex");
+        console.log(result.text);
+      },
+      error => {
+        alert(
+          "Opps something went wrong with my email relay. Please contact at the email address listed in my resume."
+        );
+        console.log(error.text);
+      }
+    );
+
+    e.target.reset();
+  }
+
   return (
     <>
       <Box mt={2}>
@@ -44,7 +70,28 @@ export default function StateTextFields() {
           Contact Me
         </Typography>
       </Box>
-      <form className={classes.root} noValidate autoComplete="off">
+      <Box m={2} className={classes.root}>
+        <Button
+          color="inherit"
+          target="_blank"
+          href="https://www.linkedin.com/in/alex-olivares/"
+        >
+          {<LinkedInIcon />}
+        </Button>
+        <Button
+          color="inherit"
+          target="_blank"
+          href="https://github.com/AlexanderOlivares"
+        >
+          {<GitHubIcon />}
+        </Button>
+      </Box>
+      <form
+        className={classes.root}
+        noValidate
+        autoComplete="off"
+        onSubmit={sendEmail}
+      >
         <div>
           <TextField
             required
@@ -70,7 +117,7 @@ export default function StateTextFields() {
         <div>
           <TextField
             id="outlined-name"
-            label="Message"
+            label="message"
             name="message"
             multiline
             rows={3}
@@ -82,6 +129,8 @@ export default function StateTextFields() {
         </div>
         <div mt={2}>
           <Button
+            type="submit"
+            value="Send"
             variant="contained"
             color="primary"
             className={classes.button}
