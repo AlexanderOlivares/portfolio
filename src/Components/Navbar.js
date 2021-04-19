@@ -8,6 +8,7 @@ import ToggleOnIcon from "@material-ui/icons/ToggleOn";
 import Brightness7Icon from "@material-ui/icons/Brightness7";
 import Brightness2Icon from "@material-ui/icons/Brightness2";
 import { IconButton } from "@material-ui/core";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -19,7 +20,7 @@ const useStyles = makeStyles(theme => ({
 export default function Navbar({ darkMode, setDarkMode }) {
   const classes = useStyles();
 
-  function toggleTheme() {
+  function toggleDarkMode() {
     setDarkMode(!darkMode);
   }
 
@@ -35,7 +36,7 @@ export default function Navbar({ darkMode, setDarkMode }) {
         <Button color="inherit" href="/contact">
           Contact
         </Button>
-        <IconButton color="inherit" onClick={toggleTheme}>
+        <IconButton color="inherit" onClick={toggleDarkMode}>
           {darkMode ? <ToggleOnIcon /> : <ToggleOffOutlinedIcon />}
         </IconButton>
         {darkMode ? <Brightness2Icon /> : <Brightness7Icon />}

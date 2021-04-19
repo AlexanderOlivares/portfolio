@@ -13,6 +13,10 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import AboutData from "./AboutData";
 import Grid from "@material-ui/core/Grid";
+import Link from "@material-ui/core/Link";
+import MailOutlineIcon from "@material-ui/icons/MailOutline";
+import GitHubIcon from "@material-ui/icons/GitHub";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -44,25 +48,28 @@ export default function About() {
           className={classes.large}
         />
       </Box>
-      {/* <Box p={3}>
-        <Container align="center">
-          <Grid
-            container
-            spacing={10}
-            alignItems="center"
-            justify="center"
-            direction="row"
+      <Typography variant="h5" align="center">
+        Web Developer
+        <Box m={2}>
+          <Button
+            color="inherit"
+            target="_blank"
+            href="https://www.linkedin.com/in/alex-olivares/"
           >
-            {aboutInfo.map(currentInfo => {
-              return (
-                <Grid key={currentInfo.name} item xs={12} sm={12} md={6}>
-                  <Card projectInfo={currentProject} />
-                </Grid>
-              );
-            })}
-          </Grid>
-        </Container>
-      </Box> */}
+            {<LinkedInIcon />}
+          </Button>
+          <Button
+            color="inherit"
+            target="_blank"
+            href="https://github.com/AlexanderOlivares"
+          >
+            {<GitHubIcon />}
+          </Button>
+          <Button color="inherit" href="/contact">
+            {<MailOutlineIcon />}
+          </Button>
+        </Box>
+      </Typography>
       <Box m={5} align="center">
         <Container align="center">
           <Grid
@@ -80,7 +87,8 @@ export default function About() {
                       <CardMedia
                         className={classes.media}
                         image={currentInfo.img}
-                        title="Contemplative Reptile"
+                        title={currentInfo.title}
+                        alt={currentInfo.title}
                       />
                       <CardContent>
                         <Typography gutterBottom variant="h5" component="h2">
@@ -95,16 +103,35 @@ export default function About() {
                           component="p"
                         >
                           {currentInfo.descrip}
+                          {/* this is for they extra link to my edabit q's  */}
+                          {/* {currentInfo.bonus && (
+                            <Link
+                              href="https://edabit.com/user/2Qk2mFu9HBFzrB24i"
+                              target="_blank"
+                            >
+                              here.
+                            </Link>
+                          )} */}
                         </Typography>
                       </CardContent>
                     </CardActionArea>
                     <CardActions>
-                      <Button size="large" color="secondary">
-                        Share
+                      <Button
+                        size="large"
+                        href={currentInfo.link1}
+                        target="_blank"
+                      >
+                        {currentInfo.link1Descrip}
                       </Button>
-                      <Button size="large" color="secondary">
-                        Learn More
-                      </Button>
+                      {currentInfo.link2 && (
+                        <Button
+                          size="large"
+                          href={currentInfo.link2}
+                          target="_blank"
+                        >
+                          {currentInfo.link2Descrip}
+                        </Button>
+                      )}
                     </CardActions>
                   </Card>
                 </Grid>
@@ -117,13 +144,3 @@ export default function About() {
     </>
   );
 }
-
-// My curiosity for coding (which began in college) was spurred
-// again in May 2020. Since then I have been coding nonstop
-// spending my mornings learning JavaScript and React with no plans
-// to slow down. I love doing challenges on Codewars and Edabit.
-// Check out my profiles and solve the questions I posted on Edabit
-// here.
-// I love to play ping-pong. Pre-pandemic I was a part of Spin's
-// weekly social league. I also enjoy slack-lining and spending
-// time outside with my dog Jaxx.
