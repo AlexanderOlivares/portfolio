@@ -1,6 +1,7 @@
 import { FaJsSquare, FaReact } from "react-icons/fa";
 import virtualbookshelf from "../images/vb.png";
 import widgetgrid from "../images/wg.png";
+import todolist from "../images/todolist.png";
 
 let projectData = [
   {
@@ -33,7 +34,7 @@ let projectData = [
     language: "React",
     name: "Todo List",
     subHeader: "React | Styled Components",
-    img: "https://picsum.photos/200/300",
+    img: todolist,
     repoUrl: "https://github.com/AlexanderOlivares/react-todolist",
     demo: "https://alexanderolivares.github.io/react-todolist/",
     shortDescrip: "My version of a React todo list.",

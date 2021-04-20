@@ -13,7 +13,6 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import AboutData from "./AboutData";
 import Grid from "@material-ui/core/Grid";
-import Link from "@material-ui/core/Link";
 import MailOutlineIcon from "@material-ui/icons/MailOutline";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";

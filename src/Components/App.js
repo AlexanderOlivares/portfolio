@@ -19,8 +19,8 @@ export default function App() {
     <>
       <ThemeProvider theme={theme}>
         <CssBaseline>
-          <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
           <Router>
+            <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
             <Switch>
               <Route exact path="/">
                 <Projects />
