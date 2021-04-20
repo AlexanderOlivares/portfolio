@@ -8,6 +8,7 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import Box from "@material-ui/core/Box";
 import projectData from "./ProjectData";
+import { Link } from "react-router-dom";
 
 export default function Projects() {
   const [projectInfo, setProjectInfo] = useState(projectData);
@@ -36,9 +37,14 @@ export default function Projects() {
             >
               {<GitHubIcon />}
             </Button>
-            <Button color="inherit" href="/contact">
+            <Link to="/contact">
+              <Button style={{ textDecoration: "none" }}>
+                {<MailOutlineIcon />}
+              </Button>
+            </Link>
+            {/* <Button color="inherit" href="/contact">
               {<MailOutlineIcon />}
-            </Button>
+            </Button> */}
           </Box>
         </Typography>
       </Box>

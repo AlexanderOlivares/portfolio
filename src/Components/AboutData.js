@@ -29,8 +29,9 @@ let AboutData = [
     img: techcamera,
     title: "About Me",
     descrip:
-      "Born and raised in Austin, TX. I grew up playing baseball and skateboarding. My passion for sports led me to working live sports broadcasts in college at Texas Tech University. After graduating I began working full-time in local TV news while I continued to do live sports production for the Texas Stars and Austin Spurs.",
-    link1: "",
+      "Born and raised in Austin, TX, I grew up playing baseball and skateboarding. My passion for sports led me to working live sports broadcasts in college at Texas Tech University. After graduating I began working full-time in the broadcast news industry and I continue to work part-time doing live sports production for the Texas Stars and Austin Spurs.",
+    link1:
+      "https://docs.google.com/document/d/1kjwbcHiMIz9vtk7QkRji6t7SqD8U7_Fx/export?format=pdf",
     link1Descrip: "Download my resume",
     link2: "",
     link2Descrip: "",

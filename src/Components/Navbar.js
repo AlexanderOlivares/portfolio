@@ -43,7 +43,7 @@ export default function Navbar({ darkMode, setDarkMode }) {
             About
           </Button>
         </Link>
-        <Link className={classes.Button} to="contact">
+        <Link className={classes.Button} to="/contact">
           <Button className={classes.link} size="medium" color="default">
             Contact
           </Button>

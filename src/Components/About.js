@@ -16,6 +16,7 @@ import Grid from "@material-ui/core/Grid";
 import MailOutlineIcon from "@material-ui/icons/MailOutline";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -28,6 +29,9 @@ const useStyles = makeStyles(theme => ({
   large: {
     width: theme.spacing(18),
     height: theme.spacing(18),
+  },
+  link: {
+    textDecoration: "none",
   },
 }));
 
@@ -64,9 +68,9 @@ export default function About() {
           >
             {<GitHubIcon />}
           </Button>
-          <Button color="inherit" href="/contact">
-            {<MailOutlineIcon />}
-          </Button>
+          <Link to="/contact">
+            <Button className={classes.link}>{<MailOutlineIcon />}</Button>
+          </Link>
         </Box>
       </Typography>
       <Box m={5} align="center">
@@ -93,7 +97,7 @@ export default function About() {
                         <Typography gutterBottom variant="h5" component="h2">
                           {currentInfo.title}
                         </Typography>
-                        {currentInfo.hasOwnProperty("bonus") && (
+                        {currentInfo.bonus && (
                           <img src="https://www.codewars.com/users/AlexanderOlivares/badges/micro"></img>
                         )}
                         <Typography
@@ -102,26 +106,19 @@ export default function About() {
                           component="p"
                         >
                           {currentInfo.descrip}
-                          {/* this is for they extra link to my edabit q's  */}
-                          {/* {currentInfo.bonus && (
-                            <Link
-                              href="https://edabit.com/user/2Qk2mFu9HBFzrB24i"
-                              target="_blank"
-                            >
-                              here.
-                            </Link>
-                          )} */}
                         </Typography>
                       </CardContent>
                     </CardActionArea>
                     <CardActions>
-                      <Button
-                        size="large"
-                        href={currentInfo.link1}
-                        target="_blank"
-                      >
-                        {currentInfo.link1Descrip}
-                      </Button>
+                      {currentInfo.link1 && (
+                        <Button
+                          size="large"
+                          href={currentInfo.link1}
+                          target="_blank"
+                        >
+                          {currentInfo.link1Descrip}
+                        </Button>
+                      )}
                       {currentInfo.link2 && (
                         <Button
                           size="large"

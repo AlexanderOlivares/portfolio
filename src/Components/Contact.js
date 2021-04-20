@@ -49,18 +49,28 @@ export default function Contact() {
 
     emailjs.sendForm(SID, TID, e.target, UID).then(
       result => {
-        alert("Thanks for reaching out -Alex");
+        alert("Message received. Thanks for reaching out -Alex");
         console.log(result.text);
       },
       error => {
         alert(
-          "Opps something went wrong with my email relay. Please contact at the email address listed in my resume."
+          "Oops something went wrong with my email relay. Please contact at the email address listed in my resume."
         );
         console.log(error.text);
       }
     );
 
-    e.target.reset();
+    setInput({
+      name: "",
+      email: "",
+      message: "",
+    });
+  }
+
+  function downloadPDF() {
+    const pdfUrl =
+      "https://docs.google.com/document/d/1kjwbcHiMIz9vtk7QkRji6t7SqD8U7_Fx/export?format=pdf";
+    window.open(pdfUrl, "_blank");
   }
 
   return (
@@ -149,6 +159,7 @@ export default function Contact() {
             variant="contained"
             color="secondary"
             endIcon={<CloudDownloadIcon></CloudDownloadIcon>}
+            onClick={downloadPDF}
           >
             Download PDF
           </Button>
