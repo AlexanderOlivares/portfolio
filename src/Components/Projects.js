@@ -13,7 +13,6 @@ import { Link } from "react-router-dom";
 export default function Projects() {
   const [projectInfo, setProjectInfo] = useState(projectData);
 
-  console.log(projectInfo);
   return (
     <>
       <Box m={3}>
