@@ -150,11 +150,11 @@ export default function Contact() {
           </Button>
         </div>
       </form>
-      <Box mt={10}>
+      <Box mt={5}>
         <Typography variant="h4" sm={"h6"} align="center">
           Download My Resume
         </Typography>
-        <Box p={3} className={classes.root}>
+        <Box p={2} className={classes.root}>
           <Button
             variant="contained"
             color="secondary"

@@ -9,7 +9,7 @@ let AboutData = [
     title: "Coding Journey",
     bonus: true,
     descrip:
-      "My curiosity for coding (which began in college) was spurred again in May 2020. Since then I've spent my mornings learning JavaScript and React before working full-time directing TV newscasts. When I'm not working on projects I enjoy doing coding challenges on Codewars and Edabit. Check out my profiles to see get a glimpse of how I solve algorithmic problems. Bonus: solve the questions I authored on Edabit (under the published tab of my profile).",
+      "My curiosity for coding (which began in college) was spurred again in May 2020. Since then I've spent my mornings learning JavaScript and React before working full-time directing TV newscasts. When I'm not working on projects I enjoy doing coding challenges on Codewars and Edabit. Check out my profiles to see some of the problems I have solved. Bonus: solve the questions I authored on Edabit (under the published tab of my profile).",
     link1: "https://www.codewars.com/users/AlexanderOlivares/completed",
     link1Descrip: "Codewars profile",
     link2: "https://edabit.com/user/2Qk2mFu9HBFzrB24i",
@@ -19,7 +19,7 @@ let AboutData = [
     img: switcher,
     title: "Live TV Experience",
     descrip:
-      "After six years of directing live newscasts and sporting events I have grown to enjoy a challenging fast-paced working environment. I have directed newscasts that have won Lone Star EMMMY's and I was in the control room during major Texas news events such as the Austin bomber, Hurricane Harvey, the Llano bridge collapse and many more.",
+      "After six years of directing live newscasts and sporting events I've grown to enjoy challenging and fast-paced working environments. I have directed newscasts that have won Lone Star EMMMY's and I was in the control room during major Texas news events such as the Austin bomber, Hurricane Harvey, the Llano bridge collapse and many more.",
     link1: "https://www.youtube.com/watch?v=iAQd1h6Y6sY",
     link1Descrip: "View my TV director reel",
     link2: "",

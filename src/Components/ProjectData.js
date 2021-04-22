@@ -2,6 +2,7 @@ import { FaJsSquare, FaReact } from "react-icons/fa";
 import virtualbookshelf from "../images/vb.png";
 import widgetgrid from "../images/wg.png";
 import todolist from "../images/todolist.png";
+import tvtimer from "../images/tvtimer.png";
 
 let projectData = [
   {
@@ -46,9 +47,9 @@ let projectData = [
     language: "JavaScript",
     name: "TV Countdown Timer",
     subHeader: "Vanilla JavaScript | CSS",
-    img: "https://picsum.photos/200/300",
-    repoUrl: "",
-    demo: "https://alexcountdowntimer.epizy.com/",
+    img: tvtimer,
+    repoUrl: "https://github.com/AlexanderOlivares/tvTimer",
+    demo: "https://alexanderolivares.github.io/tvTimer/",
     shortDescrip:
       "A voiced countdown timer for TV news producers and directors that utilizes the ResponsiveVoice Text To Speech API",
     longDescrip:
