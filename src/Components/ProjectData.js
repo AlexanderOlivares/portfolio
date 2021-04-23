@@ -16,7 +16,7 @@ let projectData = [
     shortDescrip:
       "Login with demo credentials username: janedoe@yahoo.com | password: password1234",
     longDescrip:
-      "Virtual bookshelf is place where you can visualize your collection of audiobooks or e-books on a single shelf. The book search is powered by the Google Books API. NYT Besteller List API shows you the most popular books on the homepage. EmailJS API allows you to email your shelf to friends. Login with with username/password or signin with Google.",
+      "Virtual bookshelf is place where you can visualize your collection of audiobooks or e-books on a single shelf. The book search is powered by the Google Books API. NYT Besteller List API shows you the most popular books on the homepage. EmailJS API allows you to email your shelf to friends. Login with username/password or sign-in with Google.",
   },
   {
     icon: <FaJsSquare />,
@@ -33,14 +33,14 @@ let projectData = [
   {
     icon: <FaReact />,
     language: "React",
-    name: "Todo List",
+    name: "To Do List",
     subHeader: "React | Styled Components",
     img: todolist,
     repoUrl: "https://github.com/AlexanderOlivares/react-todolist",
     demo: "https://alexanderolivares.github.io/react-todolist/",
     shortDescrip: "My version of a React todo list.",
     longDescrip:
-      "If the eye doctor is on your todo list then toggle to dark mode for a view thats easier on the eyes. Todos are stored in local storage.",
+      "If the eye doctor is on your todo list then toggle to dark mode for a view thats easier on the eyes. To dos are stored in local storage.",
   },
   {
     icon: <FaJsSquare />,
@@ -53,7 +53,7 @@ let projectData = [
     shortDescrip:
       "A voiced countdown timer for TV news producers and directors that utilizes the ResponsiveVoice Text To Speech API",
     longDescrip:
-      "A solution to a broken timer. Working in TV the seconds count. When our control room timer broke I put this app together to help us countdown our anchors and reporters. I built in functionality that allows you to accurately countdown field reporters who are hearing everything on a 2-7 delay. This app is used daily at CBS Austin to time shows and recordings.",
+      "A solution to a broken timer. Working in TV the seconds count. When our control room timer broke I put this app together to help us countdown our anchors and reporters. I built in functionality that allows you to accurately countdown field reporters who hear everything on a 2-7 second delay. This app is used daily at CBS Austin to time shows and recordings.",
   },
 ];
 
