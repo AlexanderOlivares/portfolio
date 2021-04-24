@@ -46,7 +46,7 @@ let projectData = [
     icon: <FaJsSquare />,
     language: "JavaScript",
     name: "TV Countdown Timer",
-    subHeader: "Vanilla JavaScript | CSS",
+    subHeader: "Vanilla JavaScript | Bootstrap",
     img: tvtimer,
     repoUrl: "https://github.com/AlexanderOlivares/tvTimer",
     demo: "https://alexanderolivares.github.io/tvTimer/",
