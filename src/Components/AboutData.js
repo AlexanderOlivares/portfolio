@@ -4,12 +4,11 @@ import techcamera from "../images/techcamera.jpeg";
 
 let AboutData = [
   {
-    img:
-      "https://images.unsplash.com/photo-1581276879432-15e50529f34b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1350&q=80",
-    title: "Coding Journey",
+    img: "https://images.unsplash.com/photo-1581276879432-15e50529f34b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1350&q=80",
+    title: "Algorithms & Problem Solving",
     bonus: true,
     descrip:
-      "My curiosity for coding (which began in college) was spurred again in May 2020. Since then I've spent my mornings learning JavaScript and React before working full-time directing TV newscasts. When I'm not working on projects I enjoy doing coding challenges on Codewars and Edabit. Check out my profiles to see some of the problems I have solved. Bonus: solve the questions I authored on Edabit (under the published tab of my profile).",
+      "When I'm not working on projects I enjoy doing coding challenges on Codewars and Edabit. Altogether I've solved hundreds of these algorithm-style questions. Check out my profiles to see some of the problems I have completed. Bonus: solve the questions I authored on Edabit (under the published tab of my profile).",
     link1: "https://www.codewars.com/users/AlexanderOlivares/completed",
     link1Descrip: "Codewars profile",
     link2: "https://edabit.com/user/2Qk2mFu9HBFzrB24i",
@@ -40,7 +39,7 @@ let AboutData = [
     img: jaxx,
     title: "Hobbies",
     descrip:
-      "I love to play ping-pong. Pre-pandemic I was in a social league and a competitive league at Spin. I also enjoy slack-lining and spending time outside with my dog Jaxx.",
+      "I love to play ping-pong. Pre-pandemic I was in a social league and a competitive league at Spin Austin. I also enjoy slack-lining and spending time outside with my dog Jaxx.",
     link1: "",
     link1Descrip: "",
     link2: "",
