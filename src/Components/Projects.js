@@ -41,9 +41,6 @@ export default function Projects() {
                 {<MailOutlineIcon />}
               </Button>
             </Link>
-            {/* <Button color="inherit" href="/contact">
-              {<MailOutlineIcon />}
-            </Button> */}
           </Box>
         </Typography>
       </Box>

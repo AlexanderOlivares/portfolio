@@ -37,6 +37,9 @@ const useStyles = makeStyles(theme => ({
   React: {
     backgroundColor: "#61DBFB",
   },
+  Node: {
+    backgroundColor: "#68A063",
+  },
 }));
 
 export default function ProjectInfoCard({ projectInfo }) {
@@ -54,11 +57,15 @@ export default function ProjectInfoCard({ projectInfo }) {
       <CardHeader
         avatar={
           info.language === "JavaScript" ? (
-            <Avatar aria-label="recipe" className={classes.JavaScript}>
+            <Avatar aria-label="JavaScript Logo" className={classes.JavaScript}>
+              {info.icon}
+            </Avatar>
+          ) : info.language === "React" ? (
+            <Avatar aria-label="React Logo" className={classes.React}>
               {info.icon}
             </Avatar>
           ) : (
-            <Avatar aria-label="recipe" className={classes.React}>
+            <Avatar aria-label="Node Logo" className={classes.Node}>
               {info.icon}
             </Avatar>
           )
@@ -75,10 +82,10 @@ export default function ProjectInfoCard({ projectInfo }) {
       </CardContent>
       <CardActions disableSpacing>
         <Button size="large" href={info.demo} target="_blank">
-          DEMO
+          LIVE SITE
         </Button>
         <Button size="large" href={info.repoUrl} target="_blank">
-          CODE
+          VIEW CODE
         </Button>
         <IconButton
           className={clsx(classes.expand, {
