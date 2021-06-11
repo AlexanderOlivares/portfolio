@@ -13,10 +13,7 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import AboutData from "./AboutData";
 import Grid from "@material-ui/core/Grid";
-import MailOutlineIcon from "@material-ui/icons/MailOutline";
-import GitHubIcon from "@material-ui/icons/GitHub";
-import LinkedInIcon from "@material-ui/icons/LinkedIn";
-import { Link } from "react-router-dom";
+import SocialLinks from "./SocialLinks";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -51,28 +48,7 @@ export default function About() {
           className={classes.large}
         />
       </Box>
-      <Typography variant="h5" align="center">
-        Web Developer
-        <Box m={2}>
-          <Button
-            color="inherit"
-            target="_blank"
-            href="https://www.linkedin.com/in/alex-olivares/"
-          >
-            {<LinkedInIcon />}
-          </Button>
-          <Button
-            color="inherit"
-            target="_blank"
-            href="https://github.com/AlexanderOlivares"
-          >
-            {<GitHubIcon />}
-          </Button>
-          <Link to="/contact">
-            <Button className={classes.link}>{<MailOutlineIcon />}</Button>
-          </Link>
-        </Box>
-      </Typography>
+      <SocialLinks />
       <Box m={5} align="center">
         <Container align="center">
           <Grid
@@ -82,9 +58,17 @@ export default function About() {
             justify="center"
             direction="row"
           >
-            {aboutInfo.map(currentInfo => {
+            {aboutInfo.map((currentInfo, currentIndex) => {
               return (
-                <Grid key={currentInfo.title} item xs={12} sm={12} md={6}>
+                <Grid
+                  data-aos={currentIndex % 2 === 0 ? "fade-right" : "fade-left"}
+                  data-aos-duration="700"
+                  key={currentInfo.title}
+                  item
+                  xs={12}
+                  sm={12}
+                  md={6}
+                >
                   <Card className={classes.root}>
                     <CardActionArea>
                       <CardMedia

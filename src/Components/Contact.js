@@ -82,6 +82,7 @@ export default function Contact() {
       </Box>
       <Box m={2} className={classes.root}>
         <Button
+          data-aos="fade-right"
           color="inherit"
           target="_blank"
           href="https://www.linkedin.com/in/alex-olivares/"
@@ -89,6 +90,7 @@ export default function Contact() {
           {<LinkedInIcon />}
         </Button>
         <Button
+          data-aos="fade-right"
           color="inherit"
           target="_blank"
           href="https://github.com/AlexanderOlivares"
@@ -102,7 +104,7 @@ export default function Contact() {
         autoComplete="off"
         onSubmit={sendEmail}
       >
-        <div>
+        <div data-aos="fade-right" data-aos-duration="400">
           <TextField
             required
             id="standard-name"
@@ -113,7 +115,7 @@ export default function Contact() {
             variant="filled"
           />
         </div>
-        <div>
+        <div data-aos="fade-right" data-aos-duration="600">
           <TextField
             required
             type="email"
@@ -124,7 +126,7 @@ export default function Contact() {
             variant="filled"
           />
         </div>
-        <div>
+        <div data-aos="fade-right" data-aos-duration="800">
           <TextField
             id="outlined-name"
             label="message"
@@ -137,7 +139,7 @@ export default function Contact() {
             variant="outlined"
           />
         </div>
-        <div mt={2}>
+        <div data-aos="fade-right" data-aos-duration="1000" mt={2}>
           <Button
             type="submit"
             value="Send"
@@ -150,7 +152,7 @@ export default function Contact() {
           </Button>
         </div>
       </form>
-      <Box mt={5}>
+      <Box mt={5} data-aos="fade-right" data-aos-duration="1200">
         <Typography variant="h4" sm={"h6"} align="center">
           Download My Resume
         </Typography>
