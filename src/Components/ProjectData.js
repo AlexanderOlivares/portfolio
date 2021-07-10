@@ -1,4 +1,5 @@
 import { FaJsSquare, FaReact, FaNodeJs } from "react-icons/fa";
+import { Typescript } from "@icons-pack/react-simple-icons";
 import virtualbookshelf from "../images/vb.png";
 import widgetgrid from "../images/wg.png";
 import timer from "../images/timer.png";
@@ -7,8 +8,8 @@ import wiffle from "../images/wiffle.png";
 
 let projectData = [
   {
-    icon: <FaNodeJs />,
-    language: "Node",
+    icon: <Typescript />,
+    language: "TypeScript",
     name: "Travis Heights Wiffle Ball League",
     subHeader:
       "TypeScript | React | PostgreSQL | Express | Node.js | REST API | Nodemailer | Material UI",
@@ -17,8 +18,8 @@ let projectData = [
       "https://github.com/AlexanderOlivares/TravisHeightsWiffleballLeague",
     demo: "https://wiffle.herokuapp.com/",
     shortDescrip:
-      "A signup page for a newly formed wiffle ball league in Austin, TX.",
-    longDescrip: `A website for a local wiffle ball league to attract players and notifiy them of upcoming games. Uses the Google Maps API to get both a roadmap and satellite view to guide people to the field.`,
+      "Website for a newly formed wiffle ball league in Austin, TX.",
+    longDescrip: `A website for a local wiffle ball league to attract players and notifiy them of upcoming games. Uses the Google Maps API to help guide people to the field. Signup confirmation email (SMTP) sent using Nodemailer `,
   },
   {
     icon: <FaNodeJs />,

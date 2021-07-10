@@ -40,13 +40,14 @@ const useStyles = makeStyles(theme => ({
   Node: {
     backgroundColor: "#68A063",
   },
+  TypeScript: {
+    backgroundColor: "#007acc",
+  },
 }));
 
 export default function ProjectInfoCard({ projectInfo }) {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
-
-  const [info, setInfo] = useState(projectInfo);
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
@@ -56,35 +57,32 @@ export default function ProjectInfoCard({ projectInfo }) {
     <Card className={classes.root}>
       <CardHeader
         avatar={
-          info.language === "JavaScript" ? (
-            <Avatar aria-label="JavaScript Logo" className={classes.JavaScript}>
-              {info.icon}
-            </Avatar>
-          ) : info.language === "React" ? (
-            <Avatar aria-label="React Logo" className={classes.React}>
-              {info.icon}
-            </Avatar>
-          ) : (
-            <Avatar aria-label="Node Logo" className={classes.Node}>
-              {info.icon}
-            </Avatar>
-          )
+          <Avatar
+            aria-label="JavaScript Logo"
+            className={classes[projectInfo.language]}
+          >
+            {projectInfo.icon}
+          </Avatar>
         }
         action={<IconButton aria-label="settings"></IconButton>}
-        title={info.name}
-        subheader={info.subHeader}
+        title={projectInfo.name}
+        subheader={projectInfo.subHeader}
       />
-      <CardMedia className={classes.media} image={info.img} alt="info.name" />
+      <CardMedia
+        className={classes.media}
+        image={projectInfo.img}
+        alt="projectInfo.name"
+      />
       <CardContent>
         <Typography variant="body2" color="textSecondary" component="p">
-          {info.shortDescrip}
+          {projectInfo.shortDescrip}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <Button size="large" href={info.demo} target="_blank">
+        <Button size="large" href={projectInfo.demo} target="_blank">
           LIVE SITE
         </Button>
-        <Button size="large" href={info.repoUrl} target="_blank">
+        <Button size="large" href={projectInfo.repoUrl} target="_blank">
           VIEW CODE
         </Button>
         <IconButton
@@ -101,7 +99,7 @@ export default function ProjectInfoCard({ projectInfo }) {
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-          <Typography paragraph>{info.longDescrip}</Typography>
+          <Typography paragraph>{projectInfo.longDescrip}</Typography>
         </CardContent>
       </Collapse>
     </Card>
