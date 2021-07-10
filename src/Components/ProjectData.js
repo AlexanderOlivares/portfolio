@@ -3,14 +3,29 @@ import virtualbookshelf from "../images/vb.png";
 import widgetgrid from "../images/wg.png";
 import timer from "../images/timer.png";
 import sidebar from "../images/sidebar.png";
+import wiffle from "../images/wiffle.png";
 
 let projectData = [
   {
     icon: <FaNodeJs />,
     language: "Node",
+    name: "Travis Heights Wiffle Ball League",
+    subHeader:
+      "TypeScript | React | PostgreSQL | Express | Node.js | REST API | Nodemailer | Material UI",
+    img: wiffle,
+    repoUrl:
+      "https://github.com/AlexanderOlivares/TravisHeightsWiffleballLeague",
+    demo: "https://wiffle.herokuapp.com/",
+    shortDescrip:
+      "A signup page for a newly formed wiffle ball league in Austin, TX.",
+    longDescrip: `A website for a local wiffle ball league to attract players and notifiy them of upcoming games. Uses the Google Maps API to get both a roadmap and satellite view to guide people to the field.`,
+  },
+  {
+    icon: <FaNodeJs />,
+    language: "Node",
     name: "Sidebar List",
     subHeader:
-      "PostgreSQL | Express | React | Node.js | JWT | REST api | Bootsrap | EmailJS",
+      "PostgreSQL | Express | React | Node.js | JWT | REST api | Bootstrap | EmailJS",
     img: sidebar,
     repoUrl: "https://github.com/AlexanderOlivares/sidebar-list",
     demo: "https://sidebar-list.herokuapp.com/",
