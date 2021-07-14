@@ -82,7 +82,10 @@ export default function About() {
                           {currentInfo.title}
                         </Typography>
                         {currentInfo.bonus && (
-                          <img src="https://www.codewars.com/users/AlexanderOlivares/badges/micro"></img>
+                          <img
+                            alt="codewars kata badge"
+                            src="https://www.codewars.com/users/AlexanderOlivares/badges/micro"
+                          ></img>
                         )}
                         <Typography
                           variant="body2"
