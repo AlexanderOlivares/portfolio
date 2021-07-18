@@ -4,11 +4,7 @@ import Grid from "@material-ui/core/Grid";
 import Card from "./Card";
 import Box from "@material-ui/core/Box";
 import projectData from "./ProjectData";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import SocialLinks from "./SocialLinks";
-
-AOS.init();
 
 export default function Projects() {
   const [projectInfo, setProjectInfo] = useState(projectData);

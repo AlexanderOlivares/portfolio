@@ -5,6 +5,9 @@ import Contact from "./Contact";
 import Projects from "./Projects";
 import Navbar from "./Navbar";
 import { ThemeProvider, CssBaseline, createMuiTheme } from "@material-ui/core";
+import "aos/dist/aos.css";
+import AOS from "aos";
+AOS.init();
 
 export default function App() {
   const [darkMode, setDarkMode] = useState(false);

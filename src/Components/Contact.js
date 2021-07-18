@@ -152,7 +152,7 @@ export default function Contact() {
           </Button>
         </div>
       </form>
-      <Box mt={5} data-aos="fade-right" data-aos-duration="1200">
+      <div mt={5} data-aos="fade-right" data-aos-duration="1000">
         <Typography variant="h4" sm={"h6"} align="center">
           Download My Resume
         </Typography>
@@ -166,7 +166,7 @@ export default function Contact() {
             Download PDF
           </Button>
         </Box>
-      </Box>
+      </div>
     </>
   );
 }
