@@ -43,6 +43,9 @@ const useStyles = makeStyles(theme => ({
   TypeScript: {
     backgroundColor: "#007acc",
   },
+  Python: {
+    backgroundColor: "#306998",
+  },
 }));
 
 export default function ProjectInfoCard({ projectInfo }) {

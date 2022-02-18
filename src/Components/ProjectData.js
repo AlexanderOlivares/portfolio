@@ -1,12 +1,26 @@
-import { FaJsSquare, FaReact, FaNodeJs } from "react-icons/fa";
+import { FaJsSquare, FaReact, FaNodeJs, FaPython } from "react-icons/fa";
 import { Typescript } from "@icons-pack/react-simple-icons";
 import virtualbookshelf from "../images/vb.png";
 import widgetgrid from "../images/wg.png";
 import timer from "../images/timer.png";
 import sidebar from "../images/sidebar.png";
 import wiffle from "../images/wiffle.png";
+import predictionBot from "../images/predictionBot.png";
 
 let projectData = [
+  {
+    icon: <FaPython />,
+    language: "Python",
+    name: "Prediction Bot",
+    subHeader: "Python | React | TypeScript | PostgreSQL |  Node.js",
+    img: predictionBot,
+    repoUrl: "https://github.com/AlexanderOlivares/sportsPredictionBot",
+    demo: "https://sports-prediction-bot.herokuapp.com/",
+    shortDescrip:
+      "An automated tool that scrapes predicted sports scores from the web and makes picks based on the Vegas betting line",
+    longDescrip: `Prediction bot scrapes computer-predicted scores from oddShark.com and dRatings.com and averages those scores for each matchup. 
+    It then makes a pick by analyzing the Vegas points spread and determining if the favored team will cover the spread`,
+  },
   {
     icon: <Typescript />,
     language: "TypeScript",
@@ -14,11 +28,9 @@ let projectData = [
     subHeader:
       "TypeScript | React | PostgreSQL | Express | Node.js | REST API | Nodemailer | Material UI",
     img: wiffle,
-    repoUrl:
-      "https://github.com/AlexanderOlivares/TravisHeightsWiffleballLeague",
+    repoUrl: "https://github.com/AlexanderOlivares/TravisHeightsWiffleballLeague",
     demo: "https://wiffle.herokuapp.com/",
-    shortDescrip:
-      "Website for a newly formed wiffle ball league in Austin, TX.",
+    shortDescrip: "Website for a newly formed wiffle ball league in Austin, TX.",
     longDescrip: `A website for a local wiffle ball league to attract players and notifiy them of upcoming games. Uses the Google Maps API to help guide people to the field. Signup confirmation email (SMTP) sent using Nodemailer `,
   },
   {
