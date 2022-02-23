@@ -8,7 +8,7 @@ let AboutData = [
     title: "Algorithms & Problem Solving",
     bonus: true,
     descrip:
-      "When I'm not working on projects I enjoy doing coding challenges on Codewars and Edabit. Altogether I've solved hundreds of these algorithm-style questions. Check out my profiles to see some of the problems I have completed. Bonus: solve the questions I authored on Edabit (under the published tab of my profile).",
+      "I enjoy doing coding challenges on Codewars and Edabit. Check out my profiles to see some of the problems I have completed. Bonus: solve the questions I authored on Edabit (under the published tab of my profile).",
     link1: "https://www.codewars.com/users/AlexanderOlivares/completed",
     link1Descrip: "Codewars profile",
     link2: "https://edabit.com/user/2Qk2mFu9HBFzrB24i",
@@ -28,9 +28,9 @@ let AboutData = [
     img: techcamera,
     title: "About Me",
     descrip:
-      "Born and raised in Austin, TX, I grew up playing baseball and skateboarding. My passion for sports led me to working live sports broadcasts in college at Texas Tech University. After graduating I began working full-time in the broadcast news industry and I continue to work part-time doing live sports production for the Texas Stars and Austin Spurs.",
+      "Born and raised in Austin, TX, I grew up playing baseball and skateboarding. My passion for sports led me to working live sports broadcasts in college at Texas Tech University. After graduating I began working full-time in the broadcast news industry and I continue to do freelance work as a camera operator and technical director for Texas Stars and Austin Spurs games.",
     link1:
-      "https://docs.google.com/document/d/1kjwbcHiMIz9vtk7QkRji6t7SqD8U7_Fx/export?format=pdf",
+      "https://docs.google.com/document/d/1hNti5aMvcixPM-l3yZ3uQLUAIjcbbbINlF6GLMFHJF4/export?format=pdf",
     link1Descrip: "Download my resume",
     link2: "",
     link2Descrip: "",
@@ -39,7 +39,7 @@ let AboutData = [
     img: jaxx,
     title: "Hobbies",
     descrip:
-      "I love to play ping-pong. Pre-pandemic I was in a social league and a competitive league at Spin Austin. I also enjoy slack-lining and spending time outside with my dog Jaxx.",
+      "In my free time I enjoy getting outside with my dog Jaxx, playing ping-pong, slack-lining and working on my golf game.",
     link1: "",
     link1Descrip: "",
     link2: "",

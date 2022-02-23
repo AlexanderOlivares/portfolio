@@ -69,7 +69,7 @@ export default function Contact() {
 
   function downloadPDF() {
     const pdfUrl =
-      "https://docs.google.com/document/d/1kjwbcHiMIz9vtk7QkRji6t7SqD8U7_Fx/export?format=pdf";
+      "https://docs.google.com/document/d/1hNti5aMvcixPM-l3yZ3uQLUAIjcbbbINlF6GLMFHJF4/export?format=pdf";
     window.open(pdfUrl, "_blank");
   }
 
